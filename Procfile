@@ -1,0 +1,1 @@
+web: gunicorn StaticGap.wsgi --log-file -
