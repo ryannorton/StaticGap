@@ -46,6 +46,7 @@ form {
 	height: 50px;
 	font-size: 1.4em;
 	border: 0;
+	/*font-weight: bold;*/
 }
 
 #email-submit {
@@ -55,5 +56,6 @@ form {
 	background: #fffedb;
 	border: none;
 	color: #3c3c3c;
+	font-weight: bold;
 }
 

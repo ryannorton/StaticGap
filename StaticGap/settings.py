@@ -20,8 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'ysusl90blj%pzpba#h8#h6m(f2i88!h!&v@(i#4xdb9z721!yf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-LOCAL = True
+DEBUG = False
+LOCAL = False
 
 TEMPLATE_DEBUG = True
 
@@ -89,3 +89,15 @@ if DEBUG == False and LOCAL == False:
     import dj_database_url
     DATABASES['default'] =  dj_database_url.config()
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Error Reporting - to enable, uncomment admins, enter EMAIL_HOST_PASSWORD
+ADMINS = (
+    # ('Ryan', 'nort.ryan@gmail.com'),
+)
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'nort.ryan@gmail.com'
+EMAIL_HOST_PASSWORD = os.environ.get('GMAILPASS')
+EMAIL_PORT = 587
+

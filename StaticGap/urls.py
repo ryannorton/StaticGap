@@ -3,4 +3,5 @@ from django.contrib import admin
 
 urlpatterns = patterns('',
     url(r'^$', 'landing.views.home', name='home'),
+    url(r'^submit/$', 'landing.views.submit', name='submit'),
 )
